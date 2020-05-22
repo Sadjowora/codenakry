@@ -5,5 +5,6 @@ class Choix extends React.component{
   
       return (
       <h1> Ces juste le titre </h1>
+      <p> Ces juste le titre et autre et encor</p>
       );
 }
