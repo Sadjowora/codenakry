@@ -1,15 +1,17 @@
-import React from "react"; 
+import React from "react";
+import firebase from "./firebase";
 import ReactDOM from "react-dom";  
 import Menue from './components/barreMenue.jsx';
 import Footer from './components/footer.jsx';
 import Start from './components/showslide.js'; 
 import CardClient from './components/cardClient.jsx'; 
 import FormContact from './components/formulaireContact.jsx'; 
-import Template from './components/Template.jsx'; 
+import Template from './components/Template.jsx';     
 import Codeur from './components/codeur.jsx';
 import Registre from './components/formRegistre.jsx';
 import Profile from './components/profile_menue.jsx';
 import Web from './components/web.jsx';
+import SadjoWora from './components/myself.jsx';
 import Login from './components/login.js';
 import "./styles/index.css";
 import "./styles/album.css";
@@ -20,7 +22,13 @@ import {
 } from "react-router-dom";
 
 class App extends React.Component{
-   
+
+ updateData(){
+  const db = firebase.firestore();
+  const settings = {timestampsInSnapshots: true};
+  db.settings (settings);
+ }
+
 render(){
    return (
      <Router>
@@ -38,6 +46,9 @@ render(){
                 <Route path="/formulaireContact">
                   <FormContact/>
                 </Route>
+                <Route path="/TemplateDetails">
+                  <Template />
+                </Route>
                   <Route path="/codeur">
                     <Codeur/>
                   </Route>
@@ -52,6 +63,9 @@ render(){
               </Route>
                <Route path="/web">
                    <Web/>
+                </Route>
+                 <Route path="/SadjoWora">
+                   <SadjoWora/>
                 </Route>       
           </Switch>
       </div>
