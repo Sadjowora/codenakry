@@ -11,18 +11,19 @@ return (
         <div className="col-sm-8 col-md-7 py-4">
           <h4 className="text-white">A Propos</h4>
           <p className="text-muted">
-          MissionsCodeur  est une platforme de gestions des missions freelance par contact ou client
-          Toutes personne accedant a la platforme peut voire la mission en coure et suivre sont evolution
-          ou demander a y participer de maniere tres volotaire et non remurable cela aide les jeunes Codeur
-          et foncer dans le grand et etre en contact avec les plus experimenté. Bon code a vous!!!!
+          CodeNakry est developper par Diallo Mamadou Sadjo, ingenieur informatique, developpeur web front-end ReactJs.
+          Freelance, entrepreneur depuis un moment il est qualifié pour developper des sites et des application web puissantes
+          et rapides. Prennez pour vos projets web à travers tous les reseaux.
           </p>
         </div>
         <div className="col-sm-4 offset-md-1 py-4">
           <h4 className="text-white">Contact</h4>
           <ul className="list-unstyled">
-            <li><a href="twitter.com/Sadjo Wora Diallo" className="text-white">Follow on Twitter</a></li>
-            <li><a href="fb.com/geniewora" className="text-white">Like on Facebook</a></li>
-            <li><a href="mail.google.com/geniewora@gmail.com" className="text-white">Email me</a></li>
+            <li><a href="twitter.com/@Sadjowora" className="text-white">Tel: 620027539 </a></li>
+            <li><a href="twitter.com/@Sadjowora" className="text-white">Suivre sur Twitter</a></li>
+            <li><a href="fb.com/@geniewora" className="text-white"> Liker sur Facebook</a></li>
+            <li><a href="instagram.com/@geniewora" className="text-white"> Suivre sur Instagram</a></li>
+            <li><a href="mail.google.com/geniewora@gmail.com" className="text-white">Par Mail</a></li>
           </ul>
         </div>
       </div>
@@ -35,9 +36,9 @@ return (
          <strong>CodeNakry.</strong>
         </Link>
           
-           <div>
-             <Link to="/formulaireContact" className="btn btn-danger" type="button"  >
-              Nous Contacter             
+           <div className="menue-items">
+             <Link to="/Profile" >
+               <strong > Espace Codeur </strong>   
              </Link>
              <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
               A propos <span className="navbar-toggler-icon"></span>

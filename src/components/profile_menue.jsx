@@ -1,8 +1,10 @@
 import React from "react" ;  
 import ProfileBody from './profile_body.jsx';
 import Mobile from './mobile.jsx';
-import Codeur from './codeur.jsx';
-import Desktop from './desktop.jsx';
+import Web from './web.jsx';
+import Metiers from './metiers.jsx';
+import Program from './program.jsx';
+import Footer from './footer.jsx';
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,9 +20,9 @@ const routes =  [
 		main: () => <ProfileBody />
 	},
 	{
-		path: "/Profile/web",
-		sidebar: () => <h2>Web</h2>,
-		main: () => <Codeur/>
+		path: "/Profile/devWeb",
+		sidebar: () => <h2>devWeb</h2>,
+		main: () => <Web/>
 	},
 	{
 		path: "/Profile/Mobile", 
@@ -28,9 +30,14 @@ const routes =  [
 		main: () => <Mobile/>
 	},
 	{
-		path: "/Profile/Mobile", 
-		sidebar: () => <h2>Desktop</h2>, 
-		main: () => <Desktop/>
+		path: "/Profile/Metiers", 
+		sidebar: () => <h2>Metiers</h2>, 
+		main: () => <Metiers/>
+	},
+	{
+		path: "/Profile/Program",
+		sidebar: () => <h2>Program</h2>,
+		main: () => <Program />
 	}
 ];
 
@@ -38,7 +45,7 @@ const routes =  [
 	return (
 		<Router>
 			<div className="row"> 
-			  <div className="col-md-2 menueProfile bg-dark"> 								 
+			  <div className="col-md-2 menueProfile"> 								 
 			 	<div> 
 				 	<img src="logo192.png" width="60" height="60" alt="avatar" />
 				 	<h3>Sadjowora</h3>
@@ -46,11 +53,10 @@ const routes =  [
 				<hr/>
 				<nav className="nav nav-pills flex-column  ">
 					 <Link to="/Profile" className="flex-sm-fill text-sm-left nav-link active" >Aceuil</Link>
-					 <Link to="/Profile/web" className="flex-sm-fill text-sm-left nav-link" >Web</Link>
-					 <Link to="/Profile/Mobile" className="flex-sm-fill text-sm-left nav-link" >Mobile</Link>
-					 <Link to="/Profile/Desktop" className="flex-sm-fill text-sm-left nav-link" >Desktop </Link>					
-					 <Link to="/Profile/DevOps" className="flex-sm-fill text-sm-left nav-link" >DevOps</Link>					
-					 <Link to="/Profile/Forum" className="flex-sm-fill text-sm-left nav-link" >Forum Locale</Link>					
+					 <Link to="/Profile/devWeb" className="flex-sm-fill text-sm-left nav-link" >Developpement Web</Link>
+					 <Link to="/Profile/Mobile" className="flex-sm-fill text-sm-left nav-link" >Developpement Mobile</Link>
+					 <Link to="/Profile/Metiers" className="flex-sm-fill text-sm-left nav-link" >Metiers du web </Link>					  			
+					 <Link to="/Profile/Program" className="flex-sm-fill text-sm-left nav-link" >Suivre un Program</Link>					
 				</nav>
 				<hr/>
 				<nav className="nav nav-pills flex-column  ">
@@ -58,7 +64,7 @@ const routes =  [
 					 <Link className="flex-sm-fill text-sm-left nav-link" >Outils</Link>
 					 <Link className="flex-sm-fill text-sm-left nav-link" >Conceptes</Link>
 					 <Link className="flex-sm-fill text-sm-left nav-link" >A propos </Link>
-					 <form className="inline-form"> 
+					 <form className="inline-form">
 					 <input type="text" className="form-control" placeholder="Recherche"/> 
 					 <button className="btn btn-info inline-form">Go</button>
 					 </form>
@@ -66,20 +72,9 @@ const routes =  [
 					 <a href="#" > <small>Condition dUtlisation..</small> </a>
 				</nav>					
 		      </div>
-			  <div className="col-md-8">
-			  <Switch>
-				{
-					routes.map((route, index) =>(
-						<Route 
-						key={index}
-						path={route.path}
-						exact={route.exact}
-						children={<route.sidebar/>}
-						/>							
-				 ))}
-			</Switch> 				 	
-				 <div >
-	          <Switch>
+			  <div className="col-md-9 profile_menue_body">
+			  <div >			    				 
+	         <Switch>
 	            {routes.map((route, index) => ( 
 	              <Route
 	                key={index}
@@ -88,10 +83,11 @@ const routes =  [
 	                children={<route.main />}
 	              />
 	            ))}
-	          </Switch>
+	          </Switch>	          
              </div>
 			  </div>
 			</div>
+			<Footer />
              </Router>
 		);
 }

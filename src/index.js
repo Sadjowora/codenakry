@@ -1,6 +1,6 @@
 import React from "react";
 import firebase from "./firebase";
-import ReactDOM from "react-dom";  
+import ReactDOM from "react-dom"; 
 import Menue from './components/barreMenue.jsx';
 import Footer from './components/footer.jsx';
 import Start from './components/showslide.js'; 
@@ -22,12 +22,39 @@ import {
 } from "react-router-dom";
 
 class App extends React.Component{
+    constructor(props){
+      super(props);
+      this.state={
+        missions: [] ,
+      }
+    }
 
  updateData(){
   const db = firebase.firestore();
   const settings = {timestampsInSnapshots: true};
   db.settings (settings);
+  db.collection('missions').get()
+  .then((snapshots)=>{
+    let missions = [];
+    snapshots.forEach((doc)=>{
+      let mission = Object.assign({id: doc.id}, doc.data());
+      missions.push(mission);
+    });
+      this.setState({missions: missions});
+  })
+  .catch((err)=>{
+    console.log('Erreur survenue', err)
+  })
  }
+
+componentWillMount(){
+  this.updateData();
+}
+
+componentWillUpdate() {
+  this.updateData();
+}
+
 
 render(){
    return (
@@ -38,13 +65,13 @@ render(){
               <Route exact path="/">
                 <Start />
                 <CardClient />
-                <FormContact />
+                <FormContact missions={this.state.missions} />
                 <Template />
                 <Codeur />
                 <Footer />
               </Route>
                 <Route path="/formulaireContact">
-                  <FormContact/>
+                  <FormContact items={this.state.missions} updateData={this.updateData.bind(this) }/>
                 </Route>
                 <Route path="/TemplateDetails">
                   <Template />

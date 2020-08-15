@@ -1,0 +1,77 @@
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+}
+
+ol, ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.ajoutContact input, textarea{
+  margin-right: 10px;
+  margin-bottom: 80px;
+}
+.status {
+  margin-bottom: 10px;
+  font-size:  20px;
+  color: dodgerblue;
+  font-weight: bold;
+  font-family: Segoe UI;
+}
+ 
+.jeux { 
+margin-left: 6px;
+margin-top: 50px;
+}
+.wtitle{
+  color: red;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: dodgerblue;
+  padding: 5px;
+  text-align: center;
+}
+.square {
+  background: lavender;
+  border: 2px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 104px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 104px;
+}
+.square:focus {
+  outline: none;
+  background-color: darkgray;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+.bStep{
+  font-weight: bold;
+  margin-bottom: 2px;
+  padding: 5px;
+  border: 0px;
+}
+.info{
+  margin-top: 35px;
+  font-weight: bold;
+}
+.game-info {
+  margin-left: 20px;
+}

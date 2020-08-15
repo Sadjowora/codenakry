@@ -1,0 +1,150 @@
+.jumbotron {
+   padding-top: 3rem;
+   padding-bottom: 1rem;
+   margin-bottom: 0;
+   background-image: url('/bg.png');
+   background-position: right;
+   background-repeat: no-repeat;
+   background-size: 45em;
+}
+.bg-purple {
+  background-color: #6610f2 !important;
+}
+.jumbotron-mission small{ margin-left: 2px;}
+.jumbotron-mission {
+  color: #6610f2;
+}
+.jumbotron-mission .container p{
+  color: darkblue;
+}
+.service {
+   margin-top: 3rem;
+   padding: 2px;
+}
+.citation label{ font-size: 20px; font-weight: bold; } 
+.citation p{ 
+  padding: 1rem; background-color: lavender;
+}
+.my-card {    
+  padding:  5px 5px 10px 5px; 
+  border-radius: 5px;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+}
+.my-card p{ margin-top: 2rem; font-size: 18px;}
+.web p { font-size: 16px; padding: 1rem;}
+.web img { width: 100%; height: 100%; display: block;} 
+.web small { color: black; font-size: 14px;} 
+.web {
+margin: 2rem; 
+}
+.metiers {
+margin: 2rem;
+}
+.active {
+  background-color: gray;
+}
+.mobile {
+margin: 2rem; font-size: 16px;
+}
+.container_template .card-body{ margin-top: 3rem;}
+.container_template h2{
+margin:1rem 0rem  3rem 16rem; 
+}
+.TemplateOne {  border-radius: 5px; margin: 2px; font-size: 16px;}
+.TemplateOne h1{  color:dodgerblue;   }
+.card_template{background-color: darkgray; padding:0 0 3px 2px; }
+.card_template small{font-weight: bolder;}
+.Template h1{ color: dodgerblue; }
+.Template p{padding: 5px;}
+.Template_text{font-size: 18px;}
+.Template { 
+  width: 33rem; padding: 5px;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+}
+.service p { font-size: 16px;}
+.service .list-group-item-flush { font-size: 16px; margin-left: 2rem; font-weight: bold;}
+.service .list-group-item-flush i{ margin: 0.5rem}
+.service img {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron h1 {
+  font-weight: 400;
+}
+
+.jumbotron .container {
+  max-width: 100rem;
+}
+.listing { 
+  font-size: 24px;
+  list-style-type: disc;
+  color: darkblue;
+}
+.recherche { margin:10px; }
+.recherche button { margin:5px; }
+.recherche strong { color:gray;}
+.recherche form{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  width: 100%;
+}
+.registre strong{ color:gray; }
+.registre {
+margin: 5rem 0px 0px 2rem;
+}
+.navbar-brand img {
+  margin-right: 3px;
+}
+.menueProfile h3{ color: #6610f2 ; margin-top: 2rem; }
+.menueProfile nav a{ color: gray; font-weight: bold;}
+.menueProfile nav a:hover{ color: dodgerblue; }
+.menueProfile {
+margin-top: 2rem; margin-left: 1rem; 
+padding-bottom: 5rem; padding-top: 1rem;
+box-shadow: 0 0.1rem 3rem rgba(0, 0, 0, 0.1);
+}
+.menueProfilxe img {
+  border-image: round;
+  text-align: center; 
+ }
+ .menue-items strong { color: lavender;  }
+.profile_menue_body h1, h2{ color: dodgerblue ; } 
+.bodyProfile p{ margin-top: 2rem }
+.bodyProfile img{  width: 100%; height: 100%;}
+.bodyProfile .www img{  width: 30%; height: 30%; border: 2px solid lavender; margin: 2px;}
+.bodyProfile {
+  margin-top: 2rem; font-size: 16px; 
+}
+.misson { background-color: gray; margin-top: 2rem}
+.myself img{ border: 3px solid lavender; border-radius: 5px; margin-bottom: 1rem; }
+.myself h3{ font-weight: bold; }
+.myself {
+  margin: 1rem 0rem 0rem 11rem;
+  font-size: 16px;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color:  #6610f3;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100%;
+  margin-top: 2rem;
+} 
+footer p {
+  margin-bottom: .25rem;
+  color: lavender;
+}

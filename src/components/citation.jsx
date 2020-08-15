@@ -1,6 +1,7 @@
 import React from "react";
 import citation from './citation';
- class Citation extends React.Component{
+
+class Citation extends React.Component{
   constructor(props){
     super(props);
     this.state ={
@@ -8,25 +9,22 @@ import citation from './citation';
     }
   }
  
-  render(){
-    
-     return (
-            <div className="navliste"> 
-                <h2>Toutes les citations</h2>                 
-            <hr/>
-              { this.state.keyArr.map(citatio =>(
-                <div key={citatio} className="container">
-                  <ul  className="list-group">
-                    <li className="list-group-item">
-                      <button onClick={()=>this.seeIndex(citatio)}> {citation[citatio].Auteur}  </button>
-                    </li>
-                  </ul>
-                </div>
-                  ))
-                }
-            </div>
-        ); 
-     }
-  }
-  
+componentDidMount() { 
+     const randokey = this.state.keyArr[Math.floor(Math.random() * this.state.keyArr.length)];
+     this.setState(citation[randokey]);
+ }
+render(){
+   return (
+          <div className="my-card"> 
+            <h2>Booster votre motivation:</h2>                 
+            <hr/>               
+            <div className="citation">
+              <p>" {this.state.citation} "</p>
+             <label>{this.state.Auteur}.</label>                
+            </div>                      
+          </div>
+      ); 
+   }
+}
+
 export default Citation;

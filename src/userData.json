@@ -1,0 +1,23 @@
+[
+  {
+  	"id": 1,
+  	"nom": "Diallo",
+  	"prenom": "Sadjo Wora",
+  	"email": "geniewora@gmail.com",
+  	"password": "joulkilo"
+   },
+   {
+    "id": 2,
+    "nom": "Barry",
+    "prenom": "Oumar",
+    "email": "oumar@gmail.com",
+    "password": "joulkilo"
+   },
+   {
+    "id": 3,
+    "nom": "Baldé",
+    "prenom": "Ousmane",
+    "email": "balde@gmail.com",
+    "password": "joulkilo"
+   }
+]
