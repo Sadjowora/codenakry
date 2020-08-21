@@ -36,9 +36,12 @@ return (
          <strong>CodeNakry.</strong>
         </Link>
           
-           <div className="menue-items">
+           <div className="menue-items ">
              <Link to="/Profile" >
-               <strong > Espace Codeur </strong>   
+               <strong > EspaceCodeur </strong>   
+             </Link>
+             <Link to="/Sadjowora" >
+               <strong > PortfolioAdmin</strong>   
              </Link>
              <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
               A propos <span className="navbar-toggler-icon"></span>
